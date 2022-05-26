@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); /* font-family: 'Anton', sans-serif; */
+
+body{
+    margin: 0;
+    padding: 0;
+    color: gold;
+    font-family: arial, sans-serif;  
+}
+/*Header*/
+
+.header-wrapper {
+    height: 95vh;
+    width: 100vw;
+    background: linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);
+    background-size: 1010% 1010%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundTransition ease-in-out 12s infinite;
+    position: relative;
+}
+
+.header-wrapper h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-items: center;
+}
+
+.header-wrapper h2{
+    letter-spacing: 2px;
+}
+.projects{
+    margin-top:1rem;
+    display:flex;
+}
+.projects a{
+    text-decoration:none;
+    color: whitesmoke;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    min-width: 4rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: 2.5s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.projects a:hover{
+    color:rgb(3, 46, 235);
+    background-color: gold;
+}
+
+@keyframes backgroundTransition {
+    0% {
+        background-position:  100% 50%;
+    }
+}
+
+/*Menu*/
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 15;
+    transition: .8s ease-in-out 0s;
+}
+.checkbox-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox .trace{
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position:absolute;
+    border-radius: 4px;
+    transition: .8s ease-in-out 0s;
+}
+
+.checkbox.trace:nth-child(1){
+    top:26px;
+
+}
