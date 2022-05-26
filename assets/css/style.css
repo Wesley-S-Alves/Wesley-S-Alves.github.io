@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); /* font-family: 'Anton', sans-serif; */
 
 body{
-    margin: 2rem;
+    margin: 4rem;
     padding: 8px;
     color: gold;
     font-family: arial, sans-serif;  
@@ -9,11 +9,14 @@ body{
     background-size: 1000% 1000%;
     animation: backgroundTransition ease-in-out 12s infinite;
 }
+a{
+    text-decoration: none;
+}
 /*Header*/
 
 .header-wrapper {
-    height: 60vh;
-    width: 100%;
+    height: 80vh;
+    width: 90%;
     /*background: linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);*/
     background-size: 1010% 1010%;
     display: flex;
@@ -23,7 +26,7 @@ body{
     animation: backgroundTransition ease-in-out 12s infinite;
     position: relative;
     border: 2px solid gold;
-    border-width: ;
+    margin: 0  auto;
 }
 
 .header-wrapper h1{
@@ -42,11 +45,11 @@ body{
 .projects a{
     text-decoration:none;
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 1px solid gold;
+    border: 2px solid gold;
     border-radius: 10px;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem 1rem;
     min-width: 5rem;
     display:flex;
     justify-content: center;
@@ -198,7 +201,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin:2rem auto;
+    margin:4rem auto;
     background-color: rgb(255, 255, 255);
     }
 
@@ -227,7 +230,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: grayscale(0.6);
+    filter: grayscale(0.68);
     color: white;
     cursor: pointer;
     transition: 0.5s;
@@ -315,6 +318,13 @@ body{
     font-size: 14px;
 }
 
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Mobile */
 
