@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); /* font-family: 'Anton', sans-serif; */
 
 body{
-    margin: 0;
-    padding: 0;
+    margin: 2rem;
+    padding: 8px;
     color: gold;
     font-family: arial, sans-serif;  
+    background:linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);
+    background-size: 1000% 1000%;
+    animation: backgroundTransition ease-in-out 12s infinite;
 }
 /*Header*/
 
 .header-wrapper {
-    height: 95vh;
-    width: 100vw;
-    background: linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);
+    height: 60vh;
+    width: 100%;
+    /*background: linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);*/
     background-size: 1010% 1010%;
     display: flex;
     flex-direction: column;
@@ -19,6 +22,8 @@ body{
     align-items: center;
     animation: backgroundTransition ease-in-out 12s infinite;
     position: relative;
+    border: 2px solid gold;
+    border-width: ;
 }
 
 .header-wrapper h1{
@@ -31,7 +36,7 @@ body{
     letter-spacing: 2px;
 }
 .projects{
-    margin-top:1rem;
+    margin-top:2rem;
     display:flex;
 }
 .projects a{
@@ -42,7 +47,7 @@ body{
     border: 1px solid gold;
     border-radius: 10px;
     padding: 1rem 2rem;
-    min-width: 4rem;
+    min-width: 5rem;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -187,22 +192,22 @@ body{
 /*CONTAINER*/
 
 .container {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 3rem 0;
-    color: #0f0594;
-}
+    margin:2rem auto;
+    background-color: rgb(255, 255, 255);
+    }
 
 .card-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-    height: auto;
+    margin: 0 0 3rem
 }
 
 .card-text {
@@ -212,43 +217,32 @@ body{
     color: rgb(109, 109, 109);
 }
 
-.data-science{
-    height:270px;
+.data-science, .power-bi, .dev{
+    height: 270px;
     width: 380px;
     margin: 3rem 0 0 0;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    filter: grayscale(.6);
+    filter: grayscale(0.6);
     color: white;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.data-science{
     background-image: url('/assets/images/datascience.jpg');
-    transition: .3s ease-in-out 0s;
 }
 
 .power-bi{
-    height:270px;
-    width: 380px;
-    margin: 3rem 0 0 0;
-    background-position: center;
-    align-items: center;
-    filter: grayscale(.6);
-    color: white;
-    cursor: pointer;
-    background-image: url('/assets/images/power-bi.jpg');
-    transition: .3s ease-in-out 0s;
+    background-image: url('/assets/images/power-bi.jpg'); 
 }
 
 .dev{
-    height:270px;
-    width: 380px;
-    margin: 3rem 0 0 0;
-    background-position:left;
-    align-items: center;
-    filter: grayscale(.6);
-    color: white;
-    cursor: pointer;
     background-image: url('/assets/images/dev.jpg');
-    transition: .3s ease-in-out 0s;
 }
 
 .card-text {
@@ -258,7 +252,9 @@ body{
     color: rgb(109, 109, 109);
 }
 
-.card-wrapper {
+/*cards wrapper*/
+
+.data-science-wrapper, .power-bi-wrapper, .dev-wrapper {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -267,7 +263,8 @@ body{
     position: relative;
 }
 
-.card-wrapper::before {
+
+.dev-wrapper::before, .data-science-wrapper::before, .power-bi-wrapper::before {
     content: '';
     position: absolute;
     height: 100px;
@@ -278,15 +275,17 @@ body{
     transition: 0.3s;
 }
 
-.card-wrapper h2 {
-    font-size: 40px;
+
+.data-science-wrapper h2, .power-bi-wrapper h2, .dev-wrapper h2 {
+    font-size: 28px;
+    color:rgb(154, 39, 143);
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin: 0;
+    margin: 30px;
     transition: 0.3s;
 }
 
-.dev p {
+.data-science-wrapper p, .power-bi-wrapper p, .dev-wrapper p{
     font-size: 0;
     visibility: hidden;
     opacity: 0;
@@ -295,20 +294,26 @@ body{
     transition: 0.3s;
 }
 
-.dev:hover, .power-bi:hover, .data-science:hover {
+.dev:hover,.data-science:hover,.power-bi:hover{
     filter: unset;
 }
 
+.dev:hover > .dev-wrapper::before,
+.power-bi:hover > .power-bi-wrapper::before,
+.data-science:hover > .data-science-wrapper::before{
+    height: 200px;
+    width: 300px;
+    opacity: 1;
 
+}
 
-.dev:hover > .dev p {
+.dev:hover > .dev-wrapper p,
+.power-bi:hover > .power-bi-wrapper p,
+.data-science:hover > .data-science-wrapper p{
     opacity: 1;
     visibility: visible;
     font-size: 14px;
 }
-
-
-
 
 
 /* Mobile */
