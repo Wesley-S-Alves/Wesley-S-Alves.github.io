@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); /* font-family: 'Anton', sans-serif; */
 
 body{
-    margin: 4rem;
+    margin: 2rem 4rem 0rem  4rem;
     padding: 8px;
     color: gold;
-    font-family: arial, sans-serif;  
+    font-family: 'Anton', sans-serif;  
     background:linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);
     background-size: 1000% 1000%;
     animation: backgroundTransition ease-in-out 12s infinite;
@@ -17,43 +17,67 @@ a{
 .header-wrapper {
     height: 80vh;
     width: 90%;
-    /*background: linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);*/
     background-size: 1010% 1010%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: backgroundTransition ease-in-out 12s infinite;
     position: relative;
     border: 2px solid gold;
     margin: 0  auto;
 }
 
+
+.header-wrapper-bi{
+    height:40vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid gold;
+    margin: 0 auto;
+}
+.header-wrapper-bi p{
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.header-wrapper-bi h1{
+    letter-spacing: 4px;
+}
+
 .header-wrapper h1{
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 8px;
     align-items: center;
+    font-size: 42px;;
 }
 
 .header-wrapper h2{
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    font-size: 32px;
 }
 .projects{
-    margin-top:2rem;
+    margin-top:3rem;
     display:flex;
+    
+
+
 }
-.projects a{
-    text-decoration:none;
-    color: whitesmoke;
+.projects a {
+    color: gold;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 2px solid gold;
+    font-family: 'Anton',Georgia, 'Times New Roman', Times, serif;
+    border: 2.5px solid gold;
     border-radius: 10px;
     padding: 1rem 1rem 1rem;
-    min-width: 5rem;
-    display:flex;
+    min-width: 8rem;
+    display:flexbox;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     text-transform: uppercase;
     transition: 2.5s cubic-bezier(0.075, 0.82, 0.165, 1)
 }
@@ -62,6 +86,16 @@ a{
     color:rgb(3, 46, 235);
     background-color: gold;
 }
+
+.flexbox{
+    width:60vw;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    display:flex;
+
+}
+
 
 @keyframes backgroundTransition {
     0% {
@@ -81,7 +115,7 @@ a{
     justify-content: center;
     cursor: pointer;
     z-index: 99999;
-    transition: .8s ease-in-out 0s;
+    transition: .3s ease-in-out 0s;
 }
 .checkbox-container{
     display:flex;
@@ -92,10 +126,10 @@ a{
 .checkbox .trace{
     width: 50px;
     height: 2px;
-    background-color: white;
+    background-color: gold;
     position:absolute;
     border-radius: 4px;
-    transition: .8s ease-in-out 0s;
+    transition: .4s ease-in-out 0s;
 }
 
 .checkbox .trace:nth-child(1){
@@ -124,9 +158,9 @@ a{
     height:40px;
     width: 40px;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px white;
+    box-shadow: 0px 0px 0px 0px rgb(3, 3, 110);
     z-index: -1;
-    transition: 400ms ease-in-out 0s;
+    transition: 300ms ease-in-out 0s;
 }
 
 .menu-items {
@@ -141,27 +175,37 @@ a{
     z-index: 2;
     opacity: 0;
     visibility: hidden;
-    transition: 400ms ease-in-out 0s;
+    transition: .3s ease-in-out 0s;
 }
+
 
 .menu-items ul {
     list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .menu-items ul li a{
     margin: 10px 0;
-    color: #2E1C2B;
+    color: gold;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 40px;
+    font-size: 26px;
+
+}
+
+ .menu-items ul li a:hover {
+    color: #1cc354;
 }
 
 /* ANIMAÇÃO MENU */
 
 #toggle:checked + .checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
-    background-color: #2E1C2B;
+    background-color: gold;
     top: 47px;
 }
 
@@ -174,16 +218,16 @@ a{
 
 #toggle:checked + .checkbox .trace:nth-child(3) {
     transform: rotate(-45deg);
-    background-color: #2E1C2B;
+    background-color: gold;
     top: 48px;
 }
 
 #toggle:checked + .checkbox {
-    background-color: white;
+    background-color: rgb(3, 3, 110);
 }
 
 #toggle:checked ~ .menu{
-    box-shadow: 0px 0px 0px 100vmax white;
+    box-shadow: 0px 0px 0px 100vmax rgb(3, 3, 110);
     z-index: 1;
 }
 
@@ -210,12 +254,13 @@ a{
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-    margin: 0 0 3rem
+    margin: 0 0 3rem;
+
 }
 
 .card-text {
     width: 50%;
-    font-family: sans-serif;
+    font-family: 'Anton', sans-serif;
     letter-spacing: 1px;
     color: rgb(109, 109, 109);
 }
@@ -231,9 +276,34 @@ a{
     justify-content: center;
     align-items: center;
     filter: grayscale(0.68);
-    color: white;
+    color: rgb(48, 41, 41);
     cursor: pointer;
     transition: 0.5s;
+}
+
+.power1, .power2{
+    height: 320px;
+    width: 700px;
+    margin: 3rem 1rem 0rem 0;
+    background-position:auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    filter: grayscale(0.35);
+    color: rgb(48, 41, 41);
+    cursor: pointer;
+    transition: 0.5s;
+    border:1px solid #0f0594;
+}
+
+.power1{
+    background-image: url('/assets/images/power1.png');
+}
+
+.power2{
+    background-image: url('/assets/images/power2.png');
 }
 
 .data-science{
@@ -252,7 +322,7 @@ a{
     width: 40%;
     font-family: sans-serif;
     letter-spacing: 1px;
-    color: rgb(109, 109, 109);
+    color: black;
 }
 
 /*cards wrapper*/
@@ -273,7 +343,7 @@ a{
     height: 100px;
     width: 100px;
     display: block;
-    border: 1px solid white;
+    border: 1px solid gold;
     opacity: 0;
     transition: 0.3s;
 }
@@ -281,11 +351,13 @@ a{
 
 .data-science-wrapper h2, .power-bi-wrapper h2, .dev-wrapper h2 {
     font-size: 28px;
-    color:rgb(154, 39, 143);
+    color:gold;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin: 30px;
     transition: 0.3s;
+    -webkit-text-stroke-color: rgb(3, 3, 110);
+    -webkit-text-stroke-width: 0.5px;
 }
 
 .data-science-wrapper p, .power-bi-wrapper p, .dev-wrapper p{
@@ -295,9 +367,24 @@ a{
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
+    color:gold;
+    -webkit-text-stroke-color: rgb(3, 3, 110);
+    -webkit-text-stroke-width: 0.5px;
+
 }
 
-.dev:hover,.data-science:hover,.power-bi:hover{
+.power1-wrapper a,.power2-wrapper a{
+    font-size: 0;
+    visibility: hidden;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: gold;
+    -webkit-text-stroke-color: rgb(3, 3, 110);
+    -webkit-text-stroke-width: 0.5px;
+
+}
+
+.dev:hover,.data-science:hover,.power-bi:hover, .power1:hover,.power2:hover{
     filter: unset;
 }
 
@@ -312,7 +399,9 @@ a{
 
 .dev:hover > .dev-wrapper p,
 .power-bi:hover > .power-bi-wrapper p,
-.data-science:hover > .data-science-wrapper p{
+.data-science:hover > .data-science-wrapper p,
+.power1:hover > .power1-wrapper a,
+.power2:hover > .power2-wrapper a{
     opacity: 1;
     visibility: visible;
     font-size: 14px;
@@ -324,6 +413,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* Mobile */
