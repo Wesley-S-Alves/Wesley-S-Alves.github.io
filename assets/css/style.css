@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); /* font-family: 'Anton', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap'); /* font-family: 'Oswald', sans-serif; */
 
 body{
     margin: 2rem 4rem 0rem  4rem;
     padding: 8px;
     color: gold;
-    font-family: 'Anton', sans-serif;  
+    font-family: 'Oswald', sans-serif;  
     background:linear-gradient(-45deg, #0f0594, #2307ae, #331aee, #1cc354,#0f0594,#331aee,#2307ae);
     background-size: 1000% 1000%;
     animation: backgroundTransition ease-in-out 12s infinite;
@@ -43,6 +43,7 @@ a{
     font-size: 18px;
     text-align: center;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .header-wrapper-bi h1{
@@ -59,6 +60,7 @@ a{
 .header-wrapper h2{
     letter-spacing: 4px;
     font-size: 32px;
+    text-transform: uppercase;
 }
 .projects{
     margin-top:3rem;
@@ -260,7 +262,7 @@ a{
 
 .card-text {
     width: 50%;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Osvald', sans-serif;
     letter-spacing: 1px;
     color: rgb(109, 109, 109);
 }
@@ -320,7 +322,7 @@ a{
 
 .card-text {
     width: 40%;
-    font-family: sans-serif;
+    font-family: 'Oswald';
     letter-spacing: 1px;
     color: black;
 }
